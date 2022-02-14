@@ -1,0 +1,103 @@
+* {
+  font-family: "Dongle", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Calculator Button */
+
+button {
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #e8aa8c;
+  color: #fff;
+  margin: 0.4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+}
+
+.keypad-functions button,
+.keypad-operators button {
+  background-color: #bf9270;
+}
+
+.keypad-zero button {
+  width: 14rem;
+}
+
+/* Calculator */
+
+.calculator {
+  width: 20rem;
+  height: 30rem;
+  background-color: #f9f3e6;
+  padding: 1%;
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.calculator-result {
+  height: 8vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.7rem;
+  font-size: 2.5rem;
+}
+
+.result {
+  color: #5e616a;
+}
+
+.calculator-keypad {
+  padding-top: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: repeat(5, 5rem);
+  grid-template-areas:
+    "keys-function keys-function keys-function keys-operators"
+    "keys-numbers keys-numbers keys-numbers keys-operators"
+    "keys-numbers keys-numbers keys-numbers keys-operators"
+    "keys-numbers keys-numbers keys-numbers keys-operators"
+    "keys-zero keys-zero keys-zero keys-operators";
+}
+
+.keypad-functions {
+  grid-area: keys-function;
+}
+
+.keypad-operators {
+  grid-area: keys-operators;
+}
+
+.keypad-numbers {
+  grid-area: keys-numbers;
+  direction: rtl;
+}
+
+.keypad-zero {
+  grid-area: keys-zero;
+}
+
+/* History */
+
+.history {
+  width: 5%;
+  position: absolute;
+  top: 8rem;
+  right: 28rem;
+}
+
+.element-visible {
+  display: block;
+}
+
+.element-hide {
+  display: none;
+}
